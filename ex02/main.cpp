@@ -1,5 +1,8 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main()
 {
@@ -7,37 +10,9 @@ int main()
         try
         {
             Bureaucrat bob("Bob", 44);
-            AForm tax("Tax AForm", 45, 56);
-            bob.signForm(tax);
-            std::cout << tax ;
-        }
-        catch( std::exception& e)
-        {
-            std::cerr << e.what() << '\n';
-        }
-    }
-    std::cout << "-------------------------------------------------" << std::endl;
-    {
-        try
-        {
-            Bureaucrat bob("Bob", 100);
-            AForm tax("Tax AForm", 45, 56);
-            bob.signForm(tax);
-            std::cout << tax ;
-        }
-        catch( std::exception& e)
-        {
-            std::cerr << e.what() << '\n';
-        }
-    }
-    std::cout << "-------------------------------------------------" << std::endl;
-    {
-        try
-        {
-            Bureaucrat bob("Bob", 100);
-            AForm tax("Tax AForm", 170, 56);
-            bob.signForm(tax);
-            std::cout << tax ;
+            AForm *shub = new ShrubberyCreationForm("bob");
+            bob.signForm(*shub);
+            bob.executeForm(*shub);
         }
         catch( std::exception& e)
         {
