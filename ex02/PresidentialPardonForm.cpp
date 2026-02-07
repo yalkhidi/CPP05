@@ -37,7 +37,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 
 void PresidentialPardonForm::execute(Bureaucrat const& executor) const
 {
-    if (this->getSign())
+    if (!this->getSign())
         throw AForm::FormNotSinedException();
     if (executor.getGrade() > this->getExecuteGrade())
         throw AForm::GradeTooLowException();

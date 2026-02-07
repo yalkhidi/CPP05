@@ -38,7 +38,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 {
-    if (this->getSign())
+    if (!this->getSign())
         throw AForm::FormNotSinedException();
     if (executor.getGrade() > this->getExecuteGrade())
         throw AForm::GradeTooLowException();
@@ -47,16 +47,30 @@ void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
     shrubbery_file.open(filename.c_str());
     if (!shrubbery_file.is_open())
         std::cerr << "can't open file" << std::endl;
-    int height = 5;
-    for (int i = 0; i < height; i++) 
-    {
-        for (int spaces = 0; spaces < height - i - 1; spaces++) {
-            shrubbery_file << " ";
-        }
-        for (int asterisks = 0; asterisks < i * 2 + 1; asterisks++) {
-            shrubbery_file << "*";
-        }
-        shrubbery_file << std::endl;
-    }
+    shrubbery_file << "    *" << std::endl;
+    shrubbery_file << "   ***" << std::endl;
+    shrubbery_file << "  *****" << std::endl;
+    shrubbery_file << "   ***" << std::endl;
+    shrubbery_file << "  *****" << std::endl;
+    shrubbery_file << " *******" << std::endl;
+    shrubbery_file << "   ***" << std::endl;
+    shrubbery_file << "  *****" << std::endl;
+    shrubbery_file << " *******" << std::endl;
+    shrubbery_file << "*********" << std::endl;
+    shrubbery_file << "   ||" << std::endl;
+
+    shrubbery_file << std::endl << std::endl;
+    
+    shrubbery_file << "       _-_" << std::endl;
+    shrubbery_file << "    /~~   ~~\\" << std::endl;
+    shrubbery_file << " /~~         ~~\\" << std::endl;
+    shrubbery_file << "{               }" << std::endl;
+    shrubbery_file << " \\  _-     -_  /" << std::endl;
+    shrubbery_file << "   ~  \\ //  ~" << std::endl;
+    shrubbery_file << "_- -   | | _- _" << std::endl;
+    shrubbery_file << "  _ -  | |   -_" << std::endl;
+    shrubbery_file << "      // \\" << std::endl;
     shrubbery_file.close();
+
+
 }

@@ -67,12 +67,12 @@ void AForm::beSigned(const Bureaucrat& bureaucrat)
 
 const char* AForm::GradeTooHighException::what() const throw()
 {
-    return ("AForm grade is too high");
+    return ("Grade is too high");
 }
 
 const char* AForm::GradeTooLowException::what() const throw()
 {
-    return ("AForm grade is too low");
+    return ("Grade is too low");
 }
 
 const char* AForm::FormNotSinedException ::what() const throw()

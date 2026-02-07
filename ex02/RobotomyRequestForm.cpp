@@ -1,5 +1,7 @@
 #include "RobotomyRequestForm.hpp"
 #include "Bureaucrat.hpp"
+#include <cstdlib>
+
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm()
 {
@@ -37,9 +39,13 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void RobotomyRequestForm::execute(Bureaucrat const& executor) const
 {
-    if (this->getSign())
+    if (!this->getSign())
         throw AForm::FormNotSinedException();
     if (executor.getGrade() > this->getExecuteGrade())
         throw AForm::GradeTooLowException();
-    std::cout << "Hey " << _target << " you been robotomized successfully 50% of the time" << std::endl;
+    std::cout << "* drilling noise *" << std::endl;
+    if (rand()% 2 % 2 == 0)
+        std::cout << _target << " has been robotomized successfully" << std::endl;
+    else
+        std::cout << _target << " robotomy has failed" << std::endl;
 }
