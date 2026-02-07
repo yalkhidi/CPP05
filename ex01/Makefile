@@ -1,6 +1,6 @@
 CXX			:= c++
 CXXFLAGS	:= -Wall -Werror -Wextra -std=c++98
-NAME		:= bureaucrat
+NAME		:= form
 FILES		:= Bureaucrat.cpp main.cpp Form.cpp
 OBJ			:= $(FILES:.cpp=.o)
 HEADER		:= Bureaucrat.hpp Form.hpp
