@@ -25,7 +25,6 @@ int main()
     }
     std::cout << "-------------------------------------------------" << std::endl;
     {
-        srand(time(NULL));
         try
         {
             Bureaucrat bob("Bob", 44);
@@ -41,7 +40,6 @@ int main()
     }
     std::cout << "-------------------------------------------------" << std::endl;
     {
-        srand(time(NULL));
         try
         {
             Bureaucrat bob("Bob", 4);
@@ -74,7 +72,6 @@ int main()
     }
     std::cout << "-------------------------------------------------" << std::endl;
     {
-        srand(time(NULL));
         try
         {
             Bureaucrat bob("Bob", 70);
@@ -90,7 +87,6 @@ int main()
     }
     std::cout << "-------------------------------------------------" << std::endl;
     {
-        srand(time(NULL));
         try
         {
             Bureaucrat bob("Bob", 4);
@@ -105,7 +101,6 @@ int main()
     }
     std::cout << "-------------------------------------------------" << std::endl;
     {
-        srand(time(NULL));
         try
         {
             Bureaucrat bob("Bob", 170);
