@@ -42,17 +42,19 @@ int main()
     }
     std::cout << "-------------------------------------------------" << std::endl;
     {
+        AForm* rob = NULL;
         try
         {
             Bureaucrat bureaucrat("Bob", 44);
             Intern intern;
-            AForm* rob = intern.makeForm("presidential pardon", "Tax");
+            rob = intern.makeForm("presidential pardon", "Tax");
             rob->beSigned(bureaucrat);
             rob->execute(bureaucrat);
-            delete(rob);
+            delete (rob);
         }
         catch( std::exception& e)
         {
+            delete (rob);
             std::cerr << e.what() << '\n';
         }
     }

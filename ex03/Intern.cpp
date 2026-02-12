@@ -44,6 +44,7 @@ AForm* Intern::makeForm(std::string formName, std::string target)
     {
         if (formName == formTypes[i])
         {
+            std::cout << "Intern creates " << formName << std::endl;
             return (Forms[i](target));
         }
     }
