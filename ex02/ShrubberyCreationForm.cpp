@@ -46,8 +46,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
     std::string filename = _target + "_shrubbery";
     shrubbery_file.open(filename.c_str());
     if (!shrubbery_file.is_open())
-        std::cerr << "can't open file" << std::endl;
-    shrubbery_file << "    *" << std::endl;
+        throw std::runtime_error("ShrubberyCreationForm: failed to open output file");    shrubbery_file << "    *" << std::endl;
     shrubbery_file << "   ***" << std::endl;
     shrubbery_file << "  *****" << std::endl;
     shrubbery_file << "   ***" << std::endl;
