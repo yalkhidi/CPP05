@@ -82,10 +82,10 @@ const char* AForm::FormNotSinedException ::what() const throw()
 
 std::ostream& operator<<(std::ostream& out, const AForm& form)
 {
-    std::cout << "========== AForm info ==========" << std::endl;
-    std::cout << form.getName() << std::endl;
-    std::cout << form.getSign() << std::endl;
-    std::cout << form.getSignGrade() << std::endl;
-    std::cout << form.getExecuteGrade() << std::endl;
+    out << "========== AForm info ==========" << std::endl;
+    out << form.getName() << std::endl;
+    out << form.getSign() << std::endl;
+    out << form.getSignGrade() << std::endl;
+    out << form.getExecuteGrade() << std::endl;
     return (out);
 }
