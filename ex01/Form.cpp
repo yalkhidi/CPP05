@@ -77,10 +77,10 @@ const char* Form::GradeTooLowException::what() const throw()
 
 std::ostream& operator<<(std::ostream& out, const Form& form)
 {
-    std::cout << "========== Form info ==========" << std::endl;
-    std::cout << form.getName() << std::endl;
-    std::cout << form.getSign() << std::endl;
-    std::cout << form.getSignGrade() << std::endl;
-    std::cout << form.getExecuteGrade() << std::endl;
+    out << "========== Form info ==========" << std::endl;
+    out << form.getName() << std::endl;
+    out << form.getSign() << std::endl;
+    out << form.getSignGrade() << std::endl;
+    out << form.getExecuteGrade() << std::endl;
     return (out);
 }
